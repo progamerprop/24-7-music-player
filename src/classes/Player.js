@@ -3,7 +3,7 @@
 
 
 
-
+const prefix = (',')
 const discord = require('discord.js')
 const fs = require('fs-extra');
 const ytdl = require('ytdl-core');
