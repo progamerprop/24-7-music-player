@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/moonstar-x/discord-music-24-7#readme",
   "dependencies": {
+    "@greencoast/logger": "^1.0.1",
     "discord.js": "^12.4.1",
     "ffmpeg": "0.0.4",
     "fs": "0.0.1-security",
