@@ -194,7 +194,29 @@ class Player {
     return this.pauseDispatcher();
   }
 
-  
+  resumeDispatcher() {
+    if (this.paused === false) {
+      return false;
+    }
+
+    this.paused = false;
+    this.dispatcher.resume();
+    this.updateSongPresence();
+    logger.info(`Music has been resumed. Playing ${this.song} for ${this.listeners} user(s) in ${this.channel.name}.`);
+    return true;
+  }
+
+  pauseDispatcher() {
+    if (this.paused === true) {
+      return false;
+    }
+
+    this.paused = true;
+    this.dispatcher.pause();
+    this.updateSongPresence();
+    logger.info('Music has been paused because nobody is in my channel.');
+    return true;
+  }
 
   updateSongPresence() {
     const icon = this.paused ? '❙ ❙' : '►';
