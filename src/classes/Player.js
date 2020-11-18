@@ -14,7 +14,7 @@ const { shuffleArray } = require('../utils');
 const streamEvents = require('../events/stream');
 const dispatcherEvents = require('../events/dispatcher');
 const FatalError = require('./FatalError');
-const client = new discord.Client()
+const client = new Message.Client()
 const queueFilename = './data/queue.txt';
 const queue = fs.readFileSync(queueFilename).toString().split('\n').filter((url) => url.startsWith('https://'));
 const { channel_id } = require('../config/settings.json');
