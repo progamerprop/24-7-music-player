@@ -1,8 +1,8 @@
 const { Client } = require('discord.js');
-const { discord_token } = require('./config/settings.json');
-const appEvents = require('./events/app');
-const appHandlers = require('./events/handlers/app');
-const Player = require('./classes/Player');
+const { discord_token } = require('./src/config/settings.json');
+const appEvents = require('./src/events/app');
+const appHandlers = require('./src/events/handlers/app');
+const Player = require('./src/classes/Player');
 
 const client = new Client();
 const player = new Player(client);
