@@ -218,8 +218,10 @@ class Player {
     return true;
   }
 
+  
+
   updateSongPresence() {
-    const icon = this.paused ? '❙ ❙' : '►';
+    const icon = this.paused ? '⏸' : '▶';
     this.updatePresence(`${icon} ${this.song}`);
   }
 }
