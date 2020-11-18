@@ -18,6 +18,7 @@ const FatalError = require('./FatalError');
 const queueFilename = './data/queue.txt';
 const queue = fs.readFileSync(queueFilename).toString().split('\n').filter((url) => url.startsWith('https://'));
 const { channel_id } = require('../config/settings.json');
+const { Message } = require('discord.js');
 if (shuffle) {
   shuffleArray(queue);
 }
@@ -91,6 +92,7 @@ class Player {
     })
       .then(() => {
         logger.info(`Presence updated to: ${presence}`);
+      
       })
       .catch((error) => {
         logger.error(error);
@@ -220,6 +222,17 @@ class Player {
     const icon = this.paused ? '❙ ❙' : '►';
     this.updatePresence(`${icon} ${this.song}`);
   }
-}
+} function isCommand(command, message){
+  var command = command.toLowerCase();
+  var content = message.content.toLowerCase();
+  return content.startsWith(prefix + command);
+} 
+client.on('message', (message) => {
+  if (message.author.bot) return;
+  var args = message.content.split(/[ ]+/)
+if(isCommand('invite', message)){ 
+  message.channel.send("https://discord.com/oauth2/authorize?client_id=778404550884982844&scope=bot&permissions=3147008")
+}})
+
 
 module.exports = Player;
