@@ -212,9 +212,9 @@ class Player {
     }
 
     this.paused = true;
-    this.dispatcher.pause();
+    this.dispatcher.resume();
     this.updateSongPresence();
-    logger.info('Music has been paused because nobody is in my channel.');
+    logger.info('No one is in my channel right now, But i am still playing.');
     return true;
   }
 
