@@ -17,7 +17,7 @@ const FatalError = require('./FatalError');
 
 const queueFilename = './data/queue.txt';
 const queue = fs.readFileSync(queueFilename).toString().split('\n').filter((url) => url.startsWith('https://'));
-const { channel_id } = require('../config/settings.json');
+const { channel_id } = require(procces.env.channel);
 if (shuffle) {
   shuffleArray(queue);
 }
