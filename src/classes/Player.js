@@ -227,7 +227,7 @@ class Player {
   var content = message.content.toLowerCase();
   return content.startsWith(prefix + command);
 } 
-client.on('message', (message) => {
+Client.on('message', (message) => {
   if (message.author.bot) return;
   var args = message.content.split(/[ ]+/)
 if(isCommand('invite', message)){ 
