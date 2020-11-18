@@ -23,13 +23,9 @@
   },
   "homepage": "https://github.com/moonstar-x/discord-music-24-7#readme",
   "dependencies": {
-    "@discordjs/opus": "^0.3.2",
-    "@greencoast/logger": "^1.0.1",
     "discord.js": "^12.4.1",
     "ffmpeg": "0.0.4",
-    "fs-extra": "^9.0.1",
-    "opus": "0.0.0",
-    "soundcloud-downloader": "0.0.9",
+    "fs": "0.0.1-security",
     "ytdl-core": "^4.0.5"
   },
   "devDependencies": {
